@@ -47,5 +47,9 @@ addMovie.addEventListener("click", () => {
 });
 
 const clearList = document.getElementById("clearList").addEventListener("click", () => {
-    movieList.innerHTML = "";
+    const confirmClear = confirm("This clears the WHOLE list! Are you sure you wanna do this, brev?")
+    if (confirmClear) {
+        movieList.innerHTML = "";
+    }
+    
 });
