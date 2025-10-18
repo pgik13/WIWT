@@ -24,6 +24,7 @@ addMovie.addEventListener("click", () => {
         };
 
         addMovieToDOM(movieObject);
+        alert("Make sure to click the checkbox after you've watched it");
         saveToLocalStorage();
         movie.value = "";
     }
@@ -70,14 +71,15 @@ function addMovieToDOM(movieObject) {
     li.appendChild(label);
 
     movieList.appendChild(li);
+
 }
 
 //Save movies to local storage
 function saveToLocalStorage() {
     const movies = Array.from(movieList.children).map(li => {
         return {
-            title : li.querySelector(".movie_title").textContent,
-            watched : li.querySelector(".movie_watched").checked,
+            title: li.querySelector(".movie_title").textContent,
+            watched: li.querySelector(".movie_watched").checked,
             date: li.querySelector(".movie_date").value
         };
     });
