@@ -9,7 +9,7 @@ addMovie.addEventListener("click", () => {
     if (title === "") {
         alert("Stop playing with me")
     } else {
-        const li = document.createElement("li");
+        const li = document.createElement("ul");
 
         const titleSpan = document.createElement("span");
         titleSpan.textContent = title;
